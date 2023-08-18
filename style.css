@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/*Creating variables in CSS*/
 :root{
     --text-color: white;
     --bg-url: url("assets/bg-mobile.jpg");
@@ -28,21 +27,6 @@
 }
 
 body {
-    /*
-    One way of doing:
-
-    background-image: url("assets/bg-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    */
-
-    /*
-    Other way using only one property:
-
-    `background` is a short hand property
-    order: color image repeat position / size
-    */
     background: var(--bg-url) no-repeat top center / cover;
 }
 
@@ -52,33 +36,18 @@ body * {
 }
 
 #container {
-    /* border: 1px solid red; */
     width: 360px;
-    /* height: 712px; */
-    margin: 56px auto 0px; /*top right bottom left*/
+    margin: 56px auto 0px;
     padding: 0px 24px;
 }
 
 #profile {
     text-align: center;
     padding: 24px;
-    /*
-    Other way of centering the image, but
-    the child `img` element can't be blocked
-    */
 }
 
 #profile img {
     width: 112px;
-    /* height: 112px; */
-    /*
-    Images are inline elements by default,
-    margin doesn't work! To resolve that,
-    we need to change the display to block
-
-    display: block;
-    margin: 0 auto;
-    */
 }
 
 #profile p{
@@ -86,10 +55,6 @@ body * {
     line-height: 24px;
     margin-top: 8px;
 }
-
-/*
-Switch
-*/
 
 #switch{
     position: relative;
@@ -103,9 +68,8 @@ Switch
     border: 0px;
     border-radius: 50%;
     background: white var(--switch-bg-url) no-repeat center;
-
     position: absolute;
-    top: 50%; /*Align absolute elements*/
+    top: 50%;
     left: 0px;
     transform: translateY(-50%);
     z-index: 1;
@@ -126,10 +90,6 @@ Switch
     border-radius: 9999px;
 }
 
-/*
-Links
-*/
-
 ul {
     list-style: none;
     display: flex;
@@ -138,30 +98,22 @@ ul {
     padding: 24px 0px;
 }
 
-/*ul li {}*/
 
 ul li a {
     padding: 16px 24px;
     align-items: center;
     display: flex;
     justify-content: center;
-    /*
-    display: block;
-    text-align: center;
-    */
-
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
     border-radius: 8px;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     text-decoration: none;
-    font-weight: 500; /*or bold*/
-
+    font-weight: 500;
     transition: background .2s;
 }
 
-/*pseudo-selector*/
 ul li a:hover{
     background: var(--surface-color-hover);
     border: 1px solid var(--text-color);
@@ -180,7 +132,7 @@ ul li a:hover{
     justify-content: center;
     padding: 16px;
     transition: background .2s;
-    border-radius: 50%; /*perfect circle*/
+    border-radius: 50%;
 }
 
 #social-links a:hover{
