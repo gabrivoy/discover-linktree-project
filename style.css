@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*
+    One way of doing:
+
+    background-image: url("assets/bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+
+    /*
+    Other way using only one property:
+
+    `background` is a short hand property
+    order: color image repeat position / size
+    */
+    background: url("assets/bg-mobile.jpg") no-repeat top center / cover;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+}
+
+#container {
+    /* border: 1px solid red; */
+    width: 360px;
+    /* height: 712px; */
+    margin: 56px auto 0px; /*top right bottom left*/
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+    /*
+    Other way of centering the image, but
+    the child `img` element can't be blocked
+    */
+}
+
+#profile img {
+    width: 112px;
+    /* height: 112px; */
+    /*
+    Images are inline elements by default,
+    margin doesn't work! To resolve that,
+    we need to change the display to block
+
+    display: block;
+    margin: 0 auto;
+    */
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+
